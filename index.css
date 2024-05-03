@@ -3,6 +3,8 @@
 :root {
   --color-blue: #22314a;
   --color-white: #d9d9d9;
+  --transition: all 0.3s ease-in-out;
+  --border: 1px solid var(--color-white);
 }
 
 * {
@@ -23,6 +25,29 @@ body {
   color: var(--color-white);
   background-color: var(--color-blue);
   padding: 30px;
+  position: relative;
+}
+
+img.globe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  z-index: -1;
+  animation: globeFadeIn 1.2s forwards;
+  animation-delay: 1.2s;
+}
+
+@keyframes globeFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.2;
+  }
 }
 
 h1 {
@@ -40,6 +65,27 @@ a:visited {
   color: var(--color-white);
   text-decoration: none;
   font-weight: bold;
+  transition: var(--transition);
+}
+
+button.btn {
+  border: none;
+  background: none;
+  cursor: pointer;
+  border: var(--border);
+  padding: 10px 25px;
+  border-radius: 50px;
+  transition: var(--transition);
+}
+
+button.btn:hover {
+  transform: scale(1.1);
+  color: var(--color-blue);
+  background-color: var(--color-white);
+}
+
+button.btn:hover a {
+  color: var(--color-blue);
 }
 
 section.hero {
@@ -72,12 +118,6 @@ h1#animated-heading {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-}
-
-section.hero a {
-  border: 1px solid var(--color-white);
-  padding: 10px 25px;
-  border-radius: 50px;
 }
 
 /* styles for extra small devices (phones, >=100px) */
