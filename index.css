@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+:root {
+  --color-blue: #22314a;
+  --color-white: #d9d9d9;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  font-family: inter, sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  color: var(--color-white);
+  background-color: var(--color-blue);
+  padding: 30px;
+}
+
+h1 {
+  font-family: inter;
+  text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+p,
+a {
+  font-size: 1.8rem;
+}
+
+a,
+a:visited {
+  color: var(--color-white);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+section.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 70px;
+}
+
+section.hero span {
+  opacity: 0;
+  display: inline-block;
+  animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h1#animated-heading {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+section.hero a {
+  border: 1px solid var(--color-white);
+  padding: 10px 25px;
+  border-radius: 50px;
+}
+
+/* styles for extra small devices (phones, >=100px) */
+@media only screen and (min-width: 100px) {
+  h1 {
+    font-size: 4rem;
+  }
+
+  nav img {
+    width: 20%;
+  }
+
+  section.hero {
+    text-align: center;
+    margin-top: 100px;
+  }
+
+  h1#animated-heading {
+    gap: 15px;
+  }
+}
+
+/* styles for medium devices (tablets, >=768px) */
+@media only screen and (min-width: 768px) {
+  h1 {
+    font-size: 7rem;
+  }
+
+  nav img {
+    width: 15%;
+  }
+
+  section.hero {
+    margin-top: 150px;
+  }
+
+  h1#animated-heading {
+    gap: 20px;
+  }
+}
+
+/* styles for large devices (desktops, >=992px) */
+@media only screen and (min-width: 992px) {
+  h1 {
+    font-size: 8rem;
+  }
+
+  nav img {
+    width: 7%;
+  }
+
+  section.hero {
+    margin-top: 170px;
+  }
+
+  h1#animated-heading {
+    gap: 25px;
+  }
+}
