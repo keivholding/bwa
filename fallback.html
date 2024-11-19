@@ -5,18 +5,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Blue Water Autonomy - Fallback</title>
   </head>
-  <body>
-    <section>
-      <h1>Blue Water Autonomy</h1>
-      <p>
-        This is the low bandwidth page. Go <a href="./index.html">back</a> to
-        see the full site.
-      </p>
-      <button class="btn">
-        <a href="mailto:careers@blw.ai">Contact Us</a>
-      </button>
+  <body style="padding: 20px; color: white; background: #000216">
+    <section
+      style="
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+          Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
+          sans-serif;
+      "
+    >
+      <h1 style="font-size: 2rem; line-height: 1.5; margin-bottom: 20px">
+        Blue Water Autonomy is building technology to make ships reliable
+        without crew on the open ocean.
+      </h1>
 
-      <a href="mailto:careers@blw.ai">careers@blw.ai</a>
+      <div style="font-size: 1.2rem; line-height: 1.4; margin-bottom: 30px">
+        <p style="margin-bottom: 10px; text-decoration: underline">
+          <strong>Our tech will:</strong>
+        </p>
+        <ul
+          style="
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+          "
+        >
+          <li>
+            ✓ Help unlock disaggregated fleet architectures and deploy
+            distributed payloads at low cost.
+          </li>
+          <li>✓ Help solve the shipbuilding cost crisis.</li>
+          <li>
+            ✓ Work in environments that demand the attritable and the reliable.
+          </li>
+        </ul>
+      </div>
+      <p style="font-size: 0.8rem; font-style: italic">
+        You're reading the low bandwidth website because you're on a government
+        IT system. We've suffered (and operated) government IT; we understand.
+        We want to understand how our USV tech can support your mission - please
+        reach out to
+        <a style="color: rgb(83, 94, 255)" href="mailto:aeg@blw.ai"
+          >aeg@blw.ai</a
+        >
+      </p>
     </section>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      @media only screen and (min-width: 768px) {
+        body {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          margin: 0;
+        }
+
+        section {
+          width: 50dvw;
+        }
+      }
+    </style>
   </body>
 </html>
